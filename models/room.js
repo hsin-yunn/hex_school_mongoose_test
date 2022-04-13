@@ -9,6 +9,7 @@ const roomSchema = new mongoose.Schema(
       default: 0,
     },
     rating: Number,
+    payment: Array,
     updatedAt: {
       type: Date,
       default: Date.now,

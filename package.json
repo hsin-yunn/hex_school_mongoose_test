@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start_nodemon": "nodemon server.js"
+    "start_nodemon": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "mongoose": "^6.2.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "engines": "v16.x"
 }

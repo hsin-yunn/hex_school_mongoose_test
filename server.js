@@ -1,9 +1,26 @@
 const http = require('http');
 const mongoose = require('mongoose');
 const Room = require('./models/room');
+const dotenv = require('dotenv');
 
+dotenv.config({ path: './config.env' });
+
+const DB = process.env.DATABASE.replace(
+  '<password>',
+  process.env.DATABASE_PASSWORD,
+);
+console.log(DB, 'DB');
+
+// mongoose
+//   .connect('mongodb://localhost:27017/hotel')
+//   .then(() => {
+//     console.log('連線成功');
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 mongoose
-  .connect('mongodb://localhost:27017/hotel')
+  .connect(DB)
   .then(() => {
     console.log('連線成功');
   })
